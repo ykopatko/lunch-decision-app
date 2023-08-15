@@ -1,7 +1,6 @@
-from django.utils import timezone
 from django.db import models
 from django.conf import settings
-from django.contrib.postgres.fields import JSONField
+from django.db.models import JSONField
 
 
 class Restaurant(models.Model):
@@ -17,7 +16,7 @@ class Menu(models.Model):
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="menus"
     )
-    date = models.DateField(default=timezone.now, auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     vote_count = models.IntegerField(default=0)
     menu_detail = JSONField()
 
