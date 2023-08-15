@@ -37,10 +37,11 @@ To run the Lunch Decision App, follow the instructions below:
 
 ## Build and run the Docker containers 🐳: ##
 
-   ```
+   ```shell
    docker-compose build
    docker-compose up
    ```
+
 ##  Create a superuser account: ##
 
     ```
