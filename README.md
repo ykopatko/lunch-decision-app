@@ -44,9 +44,9 @@ To run the Lunch Decision App, follow the instructions below:
 
 ##  Create a superuser account: ##
 
-    ```
-    docker exec -it ********* python manage.py createsuperuser {********* - id your container}
-    ```
+   ```shell
+   docker exec -it ********* python manage.py createsuperuser {********* - id your container}
+   ```
 
 ## The Lunch App should now be running on `http://localhost:8000`. ##
 
