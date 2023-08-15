@@ -35,7 +35,7 @@ class MenuViewSet(viewsets.ModelViewSet):
         # Retrieve data from the request.
         restaurant_id = request.data.get("restaurant")
         date = request.data.get("date")
-        menu_file = request.data.get("menu_file")
+        menu_detail = request.data.get("menu_detail")
 
         # Check if a restaurant with the specified identifier exists.
         try:
@@ -44,7 +44,7 @@ class MenuViewSet(viewsets.ModelViewSet):
             return Response({"error": "Invalid restaurant ID"}, status=400)
 
         # Create a new menu object.
-        menu = Menu(restaurant=restaurant, date=date, menu_file=menu_file)
+        menu = Menu(restaurant=restaurant, date=date, menu_detail=menu_detail)
         menu.save()
 
         # Return the created menu object in the response.
