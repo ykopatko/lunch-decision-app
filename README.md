@@ -8,7 +8,7 @@ To run the Lunch Decision App, follow the instructions below:
 
 ## Prerequisites ##
 
-- Docker and Docker Compose installed on your machine.
+- Docker and Docker Compose need to be installed on your machine.
 
 ## Clone the repository to your local machine: ##
 
@@ -52,12 +52,15 @@ To run the Lunch Decision App, follow the instructions below:
 
 Domain:
 *  localhost:8000
-*  create new user - api/user/register/
-*  get JWT Token - api/user/token/
+*  create new user - api/users/register/
+*  get JWT Token - api/users/token/
 
 ## Documentation
 Try the app and check the available endpoints via SWAGGER documentation
 - `/api/doc/swagger/`
+
+Additional info via the next url
+- `/api/doc/redoc/`
 
 ## API Endpoints
 
@@ -69,6 +72,7 @@ The Lunch App provides the following API endpoints:
 - `POST /api/lunch_app/restaurants/` - Create a new restaurant.
 - `GET /api/lunch_app/restaurants/{id}/` - Retrieve details of a specific restaurant.
 - `PUT /api/lunch_app/restaurants/{id}/` - Update a specific restaurant.
+- `PATCH /api/lunch_app/restaurants/{id}/` - Partial update  of the specific restaurant.
 - `DELETE /api/lunch_app/restaurants/{id}/` - Delete a specific restaurant.
 
 # Menus
@@ -77,10 +81,11 @@ The Lunch App provides the following API endpoints:
 - `POST /api/lunch_app/menus/` - Create a new menu.
 - `GET /api/lunch_app/menus/{id}/` - Retrieve details of a specific menu.
 - `PUT /api/lunch_app/menus/{id}/` - Update a specific menu.
+- `PATCH /api/lunch_app/menus/{id}/` - Partial update of the specific menu.
 - `DELETE /api/lunch_app/menus/{id}/` - Delete a specific menu.
-- `POST /api/lunch_app/menus/{id}/vote/` - Vote for a specific menu.
-- `GET /api/lunch_app/menus/voting-results/` - Retrieve the voting results for all menus.
-- `GET /api/lunch_app/menus/today-menu/` - Retrieve today's menu based on the highest number of votes.
+- `GET /api/lunch_app/menus/results/` - Retrieve the voting results for top chosen menus.
+- `GET /api/lunch_app/menus/today/` - Retrieve today's menu based on the highest number of votes.
+- `POST /api/lunch_app/votes/` - Vote for a specific menu.
 
 # User
 
@@ -90,6 +95,7 @@ The Lunch App provides the following API endpoints:
 - `POST /api/users/token/verify/` - Verify a JWT token.
 - `GET /api/users/me/` - Retrieve the authenticated user's details.
 - `PUT /api/users/me/` - Update the authenticated user's details.
+- `PATCH /api/users/me/` - Partial update the authenticated user's details.
 
 # Authentication
 
