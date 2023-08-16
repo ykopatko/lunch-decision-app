@@ -84,7 +84,7 @@ The Lunch App provides the following API endpoints:
 - `PATCH /api/lunch_app/menus/{id}/` - Partial update of the specific menu.
 - `DELETE /api/lunch_app/menus/{id}/` - Delete a specific menu.
 - `GET /api/lunch_app/menus/results/` - Retrieve the voting results for top chosen menus.
-- `GET /api/lunch_app/menus/today/` - Retrieve today's menu based on the highest number of votes.
+- `GET /api/lunch_app/menus/today/` - Retrieve a list of available menus for today.
 - `POST /api/lunch_app/votes/` - Vote for a specific menu.
 
 # User
